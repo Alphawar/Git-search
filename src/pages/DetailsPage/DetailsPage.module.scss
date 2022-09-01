@@ -1,0 +1,96 @@
+.userDetails {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    &__data {
+        & > p {
+            padding: 10px 0;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__avatar {
+        padding: 50px;
+
+        & > img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    &__username {
+        &::before {
+            content: 'Username: ';
+            font-weight: bold;
+        }
+    }
+
+    &__email {
+        &::before {
+            content: 'Email: ';
+            font-weight: bold;
+        }
+    }
+
+    &__location {
+        &::before {
+            content: 'Location: ';
+            font-weight: bold;
+        }
+    }
+
+    &__date {
+        &::before {
+            content: 'Join date: ';
+            font-weight: bold;
+        }
+    }
+
+    &__followers {
+        &::before {
+            content: 'Followers: ';
+            font-weight: bold;
+        }
+    }
+
+    &__following {
+        &::before {
+            content: 'Following: ';
+            font-weight: bold;
+        }
+    }
+
+    &__bio {
+        padding: 0px 10px 40px 10px;
+        text-align: center;
+    }
+}
+
+.container {
+    min-height: calc(100vh - 137px);
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 530px){
+    .userDetails {
+        &__profile {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__avatar {
+            padding: 50px 0 20px 0;
+        }
+
+        &__following {
+            margin-bottom: 20px;
+        }
+    }
+}

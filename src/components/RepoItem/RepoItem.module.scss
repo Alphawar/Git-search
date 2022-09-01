@@ -1,0 +1,45 @@
+.repo {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border-bottom: 2px solid #1b1b28;
+    padding: 20px 5px;
+
+    &:hover {
+        padding: 40px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__name {
+        flex: 2;
+    }
+
+    &__specs {
+        flex: 1;
+        text-align: end;
+
+        & > p:first-child {
+            padding-bottom: 5px;
+
+            &::after {
+                content: ' Forks'
+            }
+        }
+
+        & > p:last-child {
+            &::after {
+                content: ' Stars'
+            }
+        }
+    }
+}
