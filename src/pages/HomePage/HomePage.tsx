@@ -16,6 +16,7 @@ const HomePage: React.FC = () => {
     useEffect(() => {
         getUsers(userSearch, setUsers)
         getUsersRepos(users, setUsersRepos, setLoader)
+        // eslint-disable-next-line
     }, [userSearch])
 
     return (
