@@ -13,8 +13,6 @@ const HomePage: React.FC = () => {
     const [usersRepos, setUsersRepos] = useState<number[]>([])
     const [loader, setLoader] = useState<boolean>(false)
 
-    console.log(usersRepos)
-
     useEffect(() => {
         getUsers(userSearch, setUsers)
         // eslint-disable-next-line
