@@ -13,11 +13,16 @@ const HomePage: React.FC = () => {
     const [usersRepos, setUsersRepos] = useState<number[]>([])
     const [loader, setLoader] = useState<boolean>(false)
 
+    console.log(usersRepos)
+
     useEffect(() => {
         getUsers(userSearch, setUsers)
-        getUsersRepos(users, setUsersRepos, setLoader)
         // eslint-disable-next-line
     }, [userSearch])
+
+    useEffect(() => {
+        getUsersRepos(users, setUsersRepos, setLoader)
+    }, [users])
 
     return (
         <div className={classes.homePage}>
