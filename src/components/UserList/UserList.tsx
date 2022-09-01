@@ -4,16 +4,18 @@ import classes from './UserList.module.scss';
 import { User } from '../../types/User';
 
 interface IUserListProps {
-    users: User[]
+    users: User[],
+    repos: number[]
 }
 
-const UserList: React.FC<IUserListProps> = ({ users }) => {
+const UserList: React.FC<IUserListProps> = ({ users, repos }) => {
     return (
         <div className={classes.users}>
-            {users.map( user => 
+            {users.map( (user, index) => 
                 <UserItem 
                     user={user}
                     key={user.id}
+                    repo={repos[index]}
                 />
             )}
         </div>

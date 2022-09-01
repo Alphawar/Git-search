@@ -6,4 +6,5 @@ export type UserDetails = {
     followers: number,
     following: number,
     bio: string | null,
+    public_repos: number
 }

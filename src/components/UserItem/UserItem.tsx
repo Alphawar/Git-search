@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { User } from '../../types/User';
 
 interface IUserItemProps {
-    user: User
+    user: User,
+    repo: number
 }
 
-const UserItem: React.FC<IUserItemProps> = ({ user }) => {
+const UserItem: React.FC<IUserItemProps> = ({ user, repo }) => {
 
     const navigate = useNavigate()
 
@@ -22,7 +23,7 @@ const UserItem: React.FC<IUserItemProps> = ({ user }) => {
                 <h3>{user.login}</h3>
             </div>
             <div className={classes.user__reposQuant}>
-                <p>##</p>
+                <p>{repo}</p>
             </div>
         </div>
     );
